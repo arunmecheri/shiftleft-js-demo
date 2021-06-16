@@ -16,7 +16,9 @@ module.exports = app => {
     */
     let result = '';
     try {
-      result = require('util').inspect(eval(req.query.userInput));
+      let inputVal = 'staticText';
+      /* result = require('util').inspect(eval(req.query.userInput)); */
+      result = require('util').inspect(eval(inputVal));
     } catch (ex) {
       console.error(ex);
     }
